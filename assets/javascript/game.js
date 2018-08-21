@@ -1,6 +1,6 @@
-var wordBank = ["dog", "cat", "mouse", "rabbit"]
+var wordBank = ["rat", "ox", "tiger", "rabbit", "dragon", "snake", "horse", "goat", "monkey", "rooster", "dog", "pig"]
 var validInputs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
-"q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "];
+"q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var remainingValidInputs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
 "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
@@ -18,27 +18,40 @@ for (var i = 0; i < selectionLength; i++){
 }
 finalAnswerArray = answerArray.join(""); 
 
+var winCount = 0;
+var loseCount = 0;
 var lettersRemaining = computerSelection.length;
 var userGuess;
 var guessesRemaining = 10;
-var gameStatus = "";
 var lettersGuessed = []; // letters guessed array
 var userGuessAlreadyInArray = lettersGuessed.includes(userGuess); // boolean check
 
 // Functions
 
 function win(){
-    gameStatus = "You Win!";
+    winCount++;
 }
 
 function lose(){
-    gameStatus = "You lose!";
+    loseCount++;
 }
 
 function reset(){
-    gameStatus = "";
+    computerSelection = wordBank[Math.floor(Math.random() * wordBank.length)];
+    lettersRemaining = computerSelection.length;
+    selectionLength = computerSelection.length;
+    answerArray = [];
+    finalAnswerArray= [];
+    for (var i = 0; i < selectionLength; i++){
+        answerArray[i] = "-";
+    }
+    finalAnswerArray = answerArray.join("");
+    guessesRemaining = 10;
+    lettersGuessed = [];
+    userGuessAlreadyInArray= [];
+    remainingValidInputs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
+    "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];  
 }
-
 
 
 // This function is run whenever the user presses a key.
@@ -85,28 +98,31 @@ var letterIndex = validInputs.indexOf(userGuess);
     
 
     if ((lettersRemaining === 0) && (guessesRemaining > 0)){ // win scenario if letters remaining = 0 and remaining guess is greater than 0
-        gameStatus = "You Win!";
+        win();
+        reset();
     }
 
     if ((lettersRemaining >0) && (guessesRemaining === 0)) {
-        gameStatus = "You Lose!";
+        lose();
+        reset();
     }
 
 // html
 
 var html = 
 
+"<p>Wins: " + winCount + "</p>" +
+"<p>Losses: " + loseCount + "</p>" +
 "<p>Computer Selection: " + computerSelection + "</p>" +
-"<p>Presented Selection Final Array: " + answerArray + "</p>" +
+//"<p>Presented Selection Final Array: " + answerArray + "</p>" +
+"<p>Number of Letters Remaining: " + lettersRemaining + "</p>" +
 "<p>Presented Selection Final Array: " + finalAnswerArray + "</p>" +
-"<p>Letter Index: " + letterIndex + "</p>" +
+//"<p>Letter Index: " + letterIndex + "</p>" +
 "<p>UserGuess: " + userGuess + "</p>" +
 "<p>Guesses Remaining: " + guessesRemaining + "</p>" +
 "<p>User Guesses So Far: " + lettersGuessed.join(", ") + "</p>" +
 "<p>Number of Letters Index: " + indexRemaining + "</p>" +
-"<p>Number of Letters Remaining: " + lettersRemaining + "</p>" +
-"<p>Letters Remaining: " + remainingValidInputs.join(", ") + "</p>" +
-"<p>Game Status: " + gameStatus + "</p>"
+"<p>Letters Remaining: " + remainingValidInputs.join(", ") + "</p>"
 
 
 // Set the inner HTML contents of the #game div to our html string

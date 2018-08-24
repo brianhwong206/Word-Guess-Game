@@ -21,7 +21,6 @@ footer{
     text-align: center;
     background-color: lightgray;
     border-top: 2px solid turquoise;
-    padding: 10px;
 }
 .alert-primary{
     text-align:center;
@@ -29,35 +28,37 @@ footer{
     width: 20%;
 }
 
-.instruction-container {
-    padding: 10px;
+.theme-container {
+    padding: 20px;
     text-align: center;
     margin: auto;
 }
 
 .main-container{
-    border: 1px dashed black;
+    border: 1px solid gainsboro;
+    padding: 10px;
+    margin:auto;
+    margin-top:10px;
+    margin-bottom: 10px;
+    max-width: 80%; 
 }
 
 .main-left-container{
-    border: 1px dashed black;
+    padding:5px;
 }
 
 .main-right-container{
-    border: 1px dashed black;
+    padding: 5px;
     text-align: center;
 }
 
 .main-right-upper-container{
-    border: 1px dashed black;
     text-align: center;
     padding: 5px;
 }
 
 .image-container{
-    border: 1px solid black;
-    max-height: 400;
-    max-width: 300;
+    border: 1px solid gainsboro;
 }
 
 .image-center{
@@ -65,7 +66,8 @@ footer{
     flex-wrap: wrap;
     margin-left: auto;
     margin-right: auto;
-    max-width: 50%;
+    max-width: 30%;
     height: auto;
+    padding:10px;   
 }
 

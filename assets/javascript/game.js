@@ -345,5 +345,4 @@ document.querySelector("#currentInput").innerHTML = "Your Current Guess: " + use
 document.querySelector("#guessesSoFar").innerHTML = "Letters Guessed: " + lettersGuessed.join(", ");
 document.querySelector("#userRemainingChoices").innerHTML = "Letters Remaining: " + remainingValidInputs.join(", ");
 console.log(computerSelection);
-
 }

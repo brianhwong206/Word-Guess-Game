@@ -24,28 +24,28 @@
 <body>
 
     <header>
-    <h1>Word Guess Game: Hangman</h1>
+    <h1>Word Guess Game</h1>
     </header>
 
-    <div class = "instruction-container">
+    <div class = "theme-container">
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#instructionModal">
-            Instructions
+    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#instructionModal">
+            Click here to uncover the game's theme
     </button>
         
-        <!-- Instruction Modal -->
+        <!-- Theme Modal -->
         <div class="modal fade" id="instructionModal" tabindex="-1" role="dialog" aria-labelledby="instructionModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title" id="instructionModalLabel">Instructions</h5>
+                <h5 class="modal-title" id="instructionModalLabel">Theme</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 </div>
                 <div class="modal-body">
-                    <p>Modal body text goes here.</p>
+                    <p>You will be attempting to guess of the one of the twelve Chinese astrological animals. </p>
                 </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -54,10 +54,6 @@
             </div>
         </div>
 
-    </div>
-
-    <div class="alert alert-primary" role="alert">
-        "Please input a valid character from a-z"
     </div>
 
     <div class = "main-container">
@@ -97,40 +93,53 @@
             <div class = "col-md-5">
                 <div class = "sub-row">
                     <div class = "main-right-upper-container">
-                        <button type="button" class="btn btn-danger" onclick="showHide()">Hint</button>
+                        <p>
+
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseInstructions" aria-expanded="false" aria-controls="collapseInstructions">
+                                Instructions
+                        </button>
+                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseHint" aria-expanded="false" aria-controls="collapseHint">
+                            Hint
+                        </button>
+                        </p>
+
+                        <div class = "collapse" id = "collapseInstructions">
+                            <div class="card card-body">
+                                <p>Please select a letter from a-z to begin uncovering the answer.</p>
+                                <p>If you are having difficulty, you may click on the "Hint" button for advice.</p>
+                            </div>
+
+                        </div>
+
+                        <div class="collapse" id="collapseHint">
+                            <div class="card card-body">
+                                Guess the animal.
+                            </div>
+
+                            <div class = "image-container">
+                                    <img class = "image-center" src = "assets/images/rat.jpg" id = "rat" alt = "rat">
+                                    <img class = "image-center" src = "assets/images/ox.jpg" id = "ox" alt = "ox">
+                                    <img class = "image-center" src = "assets/images/tiger.jpg" id = "tiger" alt = "tiger">
+                                    <img class = "image-center" src = "assets/images/rabbit.jpg" id = "rabbit" alt = "rabbit">
+                                    <img class = "image-center" src = "assets/images/dragon.jpg" id = "dragon" alt = "dragon">
+                                    <img class = "image-center" src = "assets/images/snake.jpg" id = "snake" alt = "snake">
+                                    <img class = "image-center" src = "assets/images/horse.jpg" id = "horse" alt = "horse">
+                                    <img class = "image-center" src = "assets/images/monkey.jpg" id = "monkey" alt = "monkey">
+                                    <img class = "image-center" src = "assets/images/sheep.jpg" id = "sheep" alt = "sheep">
+                                    <img class = "image-center" src = "assets/images/rooster.jpg" id = "rooster" alt = "rooster">
+                                    <img class = "image-center" src = "assets/images/dog.jpg" id = "dog" alt = "dog">
+                                    <img class = "image-center" src = "assets/images/pig.jpg" id = "pig" alt = "pig">
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-
-                <div class = "main-right-container">
-                <div class = "sub-row">
-                    <p class = "hint-text">Guess this animal</p>
-                </div>
-
-                <div class = "sub-row">
-                    <div class = "image-container">
-                        <img class = "image-center" src = "assets/images/rat.jpg" id ="rat">
-                        <img class = "image-center" src = "assets/images/ox.jpg" id ="ox">
-                        <img class = "image-center" src = "assets/images/tiger.jpg" id ="tiger">
-                        <img class = "image-center" src = "assets/images/rabbit.jpg" id ="rabbit">
-                        <img class = "image-center" src = "assets/images/dragon.jpg" id ="dragon">
-                        <img class = "image-center" src = "assets/images/snake.jpg" id ="snake">
-                        <img class = "image-center" src = "assets/images/horse.jpg" id ="horse">
-                        <img class = "image-center" src = "assets/images/monkey.jpg" id ="monkey">
-                        <img class = "image-center" src = "assets/images/sheep.jpg" id ="sheep">
-                        <img class = "image-center" src = "assets/images/rooster.jpg" id ="rooster">
-                        <img class = "image-center" src = "assets/images/dog.jpg" id ="dog">
-                        <img class = "image-center" src = "assets/images/pig.jpg" id ="pig">
-                    </div>
-                </div>
-                </div> 
-
-            </div>
-
             <div class = "col-md-1"></div>
 
         </div>
 
     </div>  
+    </div>
 
     <footer>
         Copyright

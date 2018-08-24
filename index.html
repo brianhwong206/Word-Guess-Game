@@ -27,6 +27,7 @@
     <h1>Word Guess Game</h1>
     </header>
 
+    <!-- Theme Container -->
     <div class = "theme-container">
 
     <!-- Button trigger modal -->
@@ -56,11 +57,12 @@
 
     </div>
 
+    <!-- Main Container -->
     <div class = "main-container">
         <div class = "row">
-            <div class = "col-md-1"></div>
+            <div class = "col-md-6">
 
-            <div class = "col-md-5">
+                <!-- left container -->
                 <div class = "main-left-container">
                     <ul class="list-group">
                         <li class="list-group-item">
@@ -88,11 +90,14 @@
                         </li>
                     </ul>
                 </div>
+                <!-- end of left-container -->
             </div>
 
-            <div class = "col-md-5">
+            <div class = "col-md-6">
                 <div class = "sub-row">
-                    <div class = "main-right-upper-container">
+
+                    <!-- right container -->
+                    <div class = "main-right-container">
                         <p>
 
                         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseInstructions" aria-expanded="false" aria-controls="collapseInstructions">
@@ -113,7 +118,7 @@
 
                         <div class="collapse" id="collapseHint">
                             <div class="card card-body">
-                                Guess the animal.
+                                Guess the animal pictured below.
                             </div>
 
                             <div class = "image-container">
@@ -131,10 +136,10 @@
                                     <img class = "image-center" src = "assets/images/pig.jpg" id = "pig" alt = "pig">
                             </div>
                         </div>
-
+                        <!-- end of right container -->
                     </div>
                 </div>
-            <div class = "col-md-1"></div>
+            </div>
 
         </div>
 

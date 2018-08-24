@@ -13,7 +13,6 @@ for (var i = 0; i < selectionLength; i++){
 }
 finalAnswerArray = answerArray.join("");  // removal of delimiters
 
-
 var finalAnswerString = finalAnswerArray.toString(); // converts computer selection answer array to string. 
 var winCount = 0;
 var loseCount = 0;
@@ -52,6 +51,7 @@ function reset(){
     userGuess = "";
     remainingValidInputs = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p",
     "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
     document.querySelector("#rat").style.display = "none";
     document.querySelector("#ox").style.display = "none";
     document.querySelector("#tiger").style.display = "none";
@@ -253,15 +253,11 @@ case "rat":
 }
 
 
-
-
-// This operation is run whenever the user presses a key.
-
+// Start of Game
 hintAnimal();
-document.onkeyup = function(event) { 
+document.onkeyup = function(event) {  // This operation is run whenever the user presses a key.
     {
-
-        
+       
 
 
 // Determines which key was pressed.

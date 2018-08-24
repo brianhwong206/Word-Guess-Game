@@ -16,6 +16,9 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 
 </head>
 <body>
@@ -53,17 +56,77 @@
 
     </div>
 
+    <div class="alert alert-primary" role="alert">
+        "Please input a valid character from a-z"
+    </div>
+
     <div class = "main-container">
         <div class = "row">
-            <div class = "col-md-3"></div>
+            <div class = "col-md-1"></div>
 
-            <div class = "col-md-6">
+            <div class = "col-md-5">
+                <div class = "main-left-container">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <p id="winCount">Wins: </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p id="lossCount">Losses: </p>
+                        </li>
+                        <li class="list-group-item">
+                                <p id="answer">Answer: </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p id="guessesRemaining">Guesses Remaining: </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p id="guessesAttempted">Guesses Attempted: </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p id="currentInput">Your Current Guess: </p>
+                        </li>
+                        <li class="list-group-item">
+                            <p id="guessesSoFar">Your Guesses so far: </p>
+                        <li class="list-group-item">
+                            <p id="userRemainingChoices">Remaining Choices: </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-                <div id = "game"></div>
+            <div class = "col-md-5">
+                <div class = "sub-row">
+                    <div class = "main-right-upper-container">
+                        <button type="button" class="btn btn-danger" onclick="showHide()">Hint</button>
+                    </div>
+                </div>
+
+                <div class = "main-right-container">
+                <div class = "sub-row">
+                    <p class = "hint-text">Guess this animal</p>
+                </div>
+
+                <div class = "sub-row">
+                    <div class = "image-container">
+                        <img class = "image-center" src = "assets/images/rat.jpg" id ="rat">
+                        <img class = "image-center" src = "assets/images/ox.jpg" id ="ox">
+                        <img class = "image-center" src = "assets/images/tiger.jpg" id ="tiger">
+                        <img class = "image-center" src = "assets/images/rabbit.jpg" id ="rabbit">
+                        <img class = "image-center" src = "assets/images/dragon.jpg" id ="dragon">
+                        <img class = "image-center" src = "assets/images/snake.jpg" id ="snake">
+                        <img class = "image-center" src = "assets/images/horse.jpg" id ="horse">
+                        <img class = "image-center" src = "assets/images/monkey.jpg" id ="monkey">
+                        <img class = "image-center" src = "assets/images/sheep.jpg" id ="sheep">
+                        <img class = "image-center" src = "assets/images/rooster.jpg" id ="rooster">
+                        <img class = "image-center" src = "assets/images/dog.jpg" id ="dog">
+                        <img class = "image-center" src = "assets/images/pig.jpg" id ="pig">
+                    </div>
+                </div>
+                </div> 
 
             </div>
 
-            <div class = "col-md-3"></div>
+            <div class = "col-md-1"></div>
 
         </div>
 

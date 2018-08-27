@@ -75,7 +75,7 @@ switch (computerSelection) {
 case "rat":
     document.querySelector(".animal-hide").style.display = "none";
     document.querySelector("#rat").style.display = "block";
-    document.querySelector("#animal-info").innerHTML = "They are instinctive, acute and alert in nature which makes them to be brilliant businessmen. They can always react properly before the worst circumstances take place. They are also sophisticated and popular in social interaction. They are sanguine and very adaptable, being popular with others.";
+    document.querySelector("#animal-info").innerHTML = "They are instinctive, acute, and alert in nature which makes them to be brilliant businessmen. They can always react properly before the worst circumstances take place. They are also sophisticated and popular in social interaction. They are sanguine and very adaptable, being popular with others.";
     break;
 
     case "ox":
@@ -123,13 +123,13 @@ case "rat":
     case "sheep":
     document.querySelector(".animal-hide").style.display = "none";
     document.querySelector("#sheep").style.display = "block";
-    document.querySelector("#animal-info").innerHTML = "They are though of as being smart, clever and intelligent, especially in their career and wealth. They are lively, flexible, quick-witted and versatile. In addition, their gentleness and honesty bring them an everlasting love life. Although they were born with enviable skills, they still have several shortcomings, such as an impetuous temper and a tendency to look down upon others.";
+    document.querySelector("#animal-info").innerHTML = "They are thought of as being smart, clever and intelligent, especially in their career and wealth. They are lively, flexible, quick-witted and versatile. In addition, their gentleness and honesty bring them an everlasting love life. Although they were born with enviable skills, they still have several shortcomings, such as an impetuous temper and a tendency to look down upon others.";
     break;
 
     case "rooster":
     document.querySelector(".animal-hide").style.display = "none";
     document.querySelector("#rooster").style.display = "block";
-    document.querySelector("#animal-info").innerHTML = "They thougt of as being honest, bright, communicative and ambitious. Most of them are born pretty or handsome, and prefer to dress up. In daily life, they seldom rely on others. However, they might be enthusiastic about something quickly, but soon be impassive. Thus, they need to have enough faiths and patience to insist on one thing.";
+    document.querySelector("#animal-info").innerHTML = "They thought of as being honest, bright, communicative and ambitious. Most of them are born pretty or handsome, and prefer to dress up. In daily life, they seldom rely on others. However, they might be enthusiastic about something quickly, but soon be impassive. Thus, they need to have enough faiths and patience to insist on one thing.";
     break;
 
     case "dog":
